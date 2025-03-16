@@ -1,1 +1,1 @@
-# SWID-AI
+# Swid AI
