@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState} from 'react'
 import './Uploader.css'
 import { MdCloudUpload, MdDelete} from 'react-icons/md'
