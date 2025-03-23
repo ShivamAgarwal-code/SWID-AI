@@ -8,6 +8,7 @@ from torchvision.models import resnet50
 import torch.nn as nn
 from torchvision import transforms
 import os
+import time
 
 def compute_gradcam(img, STATE_DICT_PATH="../../model_code/model_ft_3.pt", NUM_CLASSES=4):
     model = resnet50(pretrained=True)
@@ -24,7 +25,7 @@ def compute_gradcam(img, STATE_DICT_PATH="../../model_code/model_ft_3.pt", NUM_C
     rgb_img = image.resize( (224, 224) )
 
     rgb_img = np.array(rgb_img).astype(np.float32) / 255.0
-
+    time.sleep(10)
     transform1 = transforms.Resize((224,224))
     transform2 = transforms.ToTensor()
     input_tensor = transform1(image)
