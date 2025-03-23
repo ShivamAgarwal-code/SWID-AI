@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useEffect } from 'react'
 import Uploader from '../components/Uploader.jsx';
 import { Popup as ReactJSPopup } from 'reactjs-popup'; 
