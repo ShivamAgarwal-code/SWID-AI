@@ -7,6 +7,7 @@ import logging
 import hf_pred as lung
 import gradcam
 import treatment
+import time
 import explanation
 import base64
 import io
@@ -49,6 +50,7 @@ def fileUpload():
     encoded_string = base64.b64encode(gradcam_image_bytes).decode("utf-8")
 
     # LLM Prompting
+    time.sleep(10)
     explanationText = explanation.generate_content(lungModelPrediction)
     treatmentText = treatment.generate_content(lungModelPrediction)
     resourcesArr = educationalResources.getEducationalResources(lungModelPrediction)
